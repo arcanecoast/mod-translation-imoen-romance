@@ -1,0 +1,5 @@
+@0    = ~(Imoen appears disheartened. It's obvious she expected to have this conversation sooner or later.)~
+@1    = ~Yeah? Something up, <GABBER>?~
+@2    = ~Imoen, I have a question. It's about Phaere.~
+@3    = ~(Spend some time with Imoen.)~
+@4    = ~(Smile at Imoen) Oh, it's nothing.~

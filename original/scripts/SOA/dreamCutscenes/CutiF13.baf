@@ -1,0 +1,38 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	Moveviewobject("hyoungim",VERY_FAST)
+	Wait(8)
+	ActionOverride("hyoungim",Displaystringhead(Myself,@0))
+	Moveviewpoint([459.446],VERY_FAST)
+	ActionOverride("hyoungim",MoveToPointNoInterrupt([459.446]))
+	Wait(1)
+	Wait(2)
+	ActionOverride("hyoungFc",MoveToPointNoInterrupt([489.402]))
+	Wait(3)
+	ActionOverride("hyoungFc",Displaystringhead(Myself,@1))
+	Wait(3)
+	ActionOverride("hyoungim",Displaystringhead(Myself,@2))
+	Wait(4)
+	ActionOverride("hyoungim",Displaystringhead(Myself,@3))
+	Wait(5)
+	FadeToColor([30.0],0)
+	Wait(1)
+	ActionOverride("hyoungim",Jumptopoint([366.388]))
+	ActionOverride("hyoungFc",Jumptopoint([411.379]))
+	Moveviewobject("hyoungim",0)
+	ActionOverride("Hyoungim",DestroySelf())
+	ActionOverride("hyoungFc",DestroySelf())
+	CreateCreature("HyounFc2",[411.379],4)
+	CreateCreature("Hyounim2",[366.388],2)
+	Wait(3)
+	Fadefromcolor([30.0],0)
+	Wait(2)
+	SetGlobal("MRDream3","GLOBAL",3)
+	Actionoverride("hyounim2",StartDialogNoSet("HyounFc2"))
+	Endcutscenemode()
+END
+
+	

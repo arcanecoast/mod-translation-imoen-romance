@@ -1,0 +1,56 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Imoen2")  // 
+    DisplayStringHead(Myself,@0)
+    MoveToPointNoInterrupt([2106.2532])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  // 
+    DisplayStringHead(Myself,@1)
+    MoveToPointNoInterrupt([2006.2532])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("MRWOMER")  // 
+    DisplayStringHead(Myself,@2)
+    MoveToPointNoInterrupt([2176.1526])
+    DisplayStringHead(Myself,@3)
+    Wait(3)
+    DisplayStringHead(Myself,@2)
+    Wait(3)
+    DisplayStringHead(Myself,@4)
+    Wait(1)
+    MoveToPointNoInterrupt([2043.1387])
+    DisplayStringHead(Myself,@5)  
+    Wait(1)
+    FadeToColor([30.0],0)
+    Wait(3)
+    ActionOverride(Player1,LeaveAreaLUA("AR0400","",[2500.2400],1))
+    ActionOverride(Player1,LeaveAreaLUAPanic("AR0400","",[2500.2400],1))
+    ActionOverride(Player2,LeaveAreaLUA("AR0400","",[2600.2400],11))
+    ActionOverride(Player2,LeaveAreaLUAPanic("AR0400","",[2600.2400],11))
+    ActionOverride(Player3,LeaveAreaLUA("AR0400","",[2700.2400],6))
+    ActionOverride(Player3,LeaveAreaLUAPanic("AR0400","",[2700.2400],6))
+    ActionOverride(Player4,LeaveAreaLUA("AR0400","",[2500.2500],7))
+    ActionOverride(Player4,LeaveAreaLUAPanic("AR0400","",[2500.2500],7))
+    ActionOverride(Player5,LeaveAreaLUA("AR0400","",[2600.2500],8))
+    ActionOverride(Player5,LeaveAreaLUAPanic("AR0400","",[2600.2500],8))
+    ActionOverride(Player6,LeaveAreaLUA("AR0400","",[2700.2500],9))
+    ActionOverride(Player6,LeaveAreaLUAPanic("AR0400","",[2700.2500],9))
+    Wait(1)
+    MoveViewObject("Imoen2",INSTANT)
+    Wait(1)
+    FadeFromColor([30.0],0)
+    Wait(2)
+    StartCutScene("ImWoCut4")
+END
+

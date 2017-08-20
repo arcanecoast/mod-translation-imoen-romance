@@ -1,0 +1,79 @@
+IF
+	Die()
+	!Global("IRTPolymorphShadow","LOCALS",1)
+	!Global("IRTPolymorphShadowDie","LOCALS",1)
+THEN
+	RESPONSE #100
+	   SetGlobal("IRTPolymorphShadowDie","LOCALS",1)
+		Polymorph(SHADOW)
+		SmallWait(5)
+		Kill(Myself)
+END
+
+IF
+	!GlobalGT("StartedGorionCutscene","AR5202",0)
+   !Global("IRTPolymorphShadow","LOCALS",1)
+   !Allegiance(Myself,ENEMY)
+   OR(16)
+      Dead("MRPHLYDI")
+      Dead("MRDREPPI")
+      Dead("MRREEVOR")
+      Dead("MRJONDAL")
+      Dead("MROBE")
+      Dead("MRHULL")
+      Dead("MRFULLER")
+      Dead("MRKHALID")
+      HPPercentLT("MRPHLYDI",100)
+      HPPercentLT("MRDREPPI",100)
+      HPPercentLT("MRREEVOR",100)
+      HPPercentLT("MRJONDAL",100)
+      HPPercentLT("MROBE",100)
+      HPPercentLT("MRHULL",100)
+      HPPercentLT("MRFULLER",100)
+      HPPercentLT("MRKHALID",100)
+THEN
+   RESPONSE #100
+	   SetGlobal("IRTPolymorphShadow","LOCALS",1)
+      CreateCreature("HGWRA01",[1456.1336],14)
+      ActionOverride("HGWRA01",Enemy())
+      DisplayStringHead(Myself,@0)
+      Enemy()
+      CreateVisualEffectObject("SPFLESHS",Myself)
+      DestroyAllEquipment()
+      Polymorph(SHADOW)
+      ChangeAIScript("WTASIGHT",OVERRIDE)
+      StartCutScene("cut218g")
+END
+
+IF
+	GlobalGT("StartedGorionCutscene","AR5202",0)
+   !Global("IRTPolymorphShadow","LOCALS",1)
+   !Allegiance(Myself,ENEMY)
+   OR(16)
+      Dead("MRPHLYDI")
+      Dead("MRDREPPI")
+      Dead("MRREEVOR")
+      Dead("MRJONDAL")
+      Dead("MROBE")
+      Dead("MRHULL")
+      Dead("MRFULLER")
+      Dead("MRKHALID")
+      HPPercentLT("MRPHLYDI",100)
+      HPPercentLT("MRDREPPI",100)
+      HPPercentLT("MRREEVOR",100)
+      HPPercentLT("MRJONDAL",100)
+      HPPercentLT("MROBE",100)
+      HPPercentLT("MRHULL",100)
+      HPPercentLT("MRFULLER",100)
+      HPPercentLT("MRKHALID",100)
+THEN
+   RESPONSE #100
+	   SetGlobal("IRTPolymorphShadow","LOCALS",1)
+      DisplayStringHead(Myself,@0)
+      Enemy()
+      CreateVisualEffectObject("SPFLESHS",Myself)
+      DestroyAllEquipment()
+      Polymorph(SHADOW)
+      ChangeAIScript("WTASIGHT",OVERRIDE)
+END
+

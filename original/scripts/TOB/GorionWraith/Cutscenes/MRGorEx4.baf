@@ -1,0 +1,143 @@
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("HGWRA01")
+ SmallWait(3)
+ StartCutScene("Cut218g")
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRPHLYDI")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRWINTHR")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack("Imoen2")
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRKHALID")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack("Imoen2")
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRDREPPI")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRREEVOR")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRJONDAL")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MROBE")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRHULL")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END
+
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId("MRFULLER")
+ SetGlobal("IRTPolymorphShadow","LOCALS",1)
+ DisplayStringHead(Myself,@0)
+ Enemy()
+ CreateVisualEffectObject("SPFLESHS",Myself)
+ DestroyAllEquipment()
+ Polymorph(SHADOW)
+ ChangeAIScript("WTASIGHT",OVERRIDE)
+ Attack(NearestEnemyOf(Myself))
+END

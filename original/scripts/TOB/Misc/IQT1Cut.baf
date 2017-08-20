@@ -1,0 +1,15 @@
+IF
+   True()
+THEN
+   RESPONSE #100
+   CutSceneID(Player1)
+   StartCutSceneMode() 
+	FadeToColor([30.0],0) 
+	Wait(1)
+    RestorePartyLocations()	
+	RestParty() 
+	Wait(1) 
+	FadeFromColor([30.0],0) 
+	DisplayStringHead("Imoen2",@0) 
+	EndCutSceneMode()
+END

@@ -1,0 +1,31 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	FadeToColor([30.0],0)
+      Wait(3)
+	ActionOverride("ImDream",DestroySelf())
+	ActionOverride("YoungeFc",DestroySelf())
+	ActionOverride("Youngeri",DestroySelf())
+	SetGlobal("MRDream2","GLOBAL",7)
+	RestorePartyLocations()
+	MultiPlayerSync()
+      MoveViewObject(Player1,0)
+	Wait(3)
+	RestParty()
+      FadeFromColor([30.0],0)
+	Wait(2)
+	SetGlobal("Dream2passed","GLOBAL",1)
+END
+
+IF
+	Global("Dream2passed","GLOBAL",1)
+THEN
+  RESPONSE #100
+	SetGlobal("Dream2passed","GLOBAL",2)
+	DisplayStringHead(Myself,@0)
+	Wait(2)
+	AddJournalEntry(@1,INFO)
+	EndCutSceneMode()
+END

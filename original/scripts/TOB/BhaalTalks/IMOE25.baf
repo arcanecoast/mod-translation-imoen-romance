@@ -1,0 +1,311 @@
+IF
+	Global("StartedBhaalTimerTalk","GLOBAL",0)
+	Global("IRTBhaalTalkTimer","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("StartedBhaalTimerTalk","GLOBAL",1)
+	RealSetGlobalTimer("IRTBhaalTalkTimer","GLOBAL",2700)
+END
+
+
+// talks 1
+IF
+	RealGlobalTimerExpired("IRTBhaalTalkTimer","GLOBAL")
+	Global("ExpBImoen10","LOCALS",0)
+	!ActuallyInCombat()
+	See(Player1)
+	InParty("Imoen2")
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+	RESPONSE #100
+	Interact(Player1)
+END
+
+// talks 2
+IF
+	RealGlobalTimerExpired("IRTBhaalTalkTimer","GLOBAL")
+	Global("ExpBImoen10","LOCALS",1)
+	!ActuallyInCombat()
+	See(Player1)
+	InParty("Imoen2")
+	Dead("Gromnir")
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+	RESPONSE #100
+	Interact(Player1)
+END
+
+// talks 3
+IF
+	RealGlobalTimerExpired("IRTBhaalTalkTimer","GLOBAL")
+	Global("ExpBImoen10","LOCALS",2)
+	!ActuallyInCombat()
+	Dead("Yaga01")
+	See(Player1)
+	InParty("Imoen2")
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+	RESPONSE #100
+	Interact(Player1)
+END
+
+
+//4 fights after convo to embrace taint, she transforms
+
+//Increment IRTRavagerTurnCounter starts from 1 really, when going into combat
+IF
+    !Global("IRTEnteredCombat","GLOBAL",1)
+	!Global("IRTRavagerTurnCounter","GLOBAL",0)
+	GlobalLT("IRTRavagerTurnCounter","GLOBAL",5)
+	See(NearestEnemyOf(Myself))
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	ActuallyInCombat()
+THEN
+   RESPONSE #100
+    SetGlobal("IRTEnteredCombat","GLOBAL",1)
+END
+
+IF
+     Global("IRTEnteredCombat","GLOBAL",1)
+	!Global("IRTRavagerTurnCounter","GLOBAL",0)
+	GlobalLT("IRTRavagerTurnCounter","GLOBAL",5)
+	!ActuallyInCombat()
+THEN
+   RESPONSE #100
+    SetGlobal("IRTEnteredCombat","GLOBAL",2)
+	IncrementGlobal("IRTRavagerTurnCounter","GLOBAL",1)
+END
+
+//entering combat for the 4th time has talk she goes slayer
+IF
+	Global("IRTRavagerTurnCounter","GLOBAL",5)
+	See(NearestEnemyOf(Myself))
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	ActuallyInCombat()
+THEN
+   RESPONSE #100
+    IncrementGlobal("IRTRavagerTurnCounter","GLOBAL",1)
+	SetGlobal("IRTImoenRavagerTransformation","GLOBAL",1)
+    StartDialogueNoSet(Player1)
+END
+
+
+//goes slayer after talk
+IF
+	Global("IRTImoenRavagerTransformation","GLOBAL",2)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+	SetGlobal("IRTImoenRavagerTransformation","GLOBAL",3)
+	SetGlobalTimer("ImoenRavagerTimer","GLOBAL",30)
+    DisplayStringHead(Myself,@0 )
+	ReallyForceSpellRES("ravagim",Myself) //ReallyForceSpell(Myself,SLAYER_ENEMY) // SPIN783.SPL (Slayer Change)
+END
+
+IF
+	Global("IRTImoenRavagerTransformation","GLOBAL",3)
+	!GlobalTimerExpired("ImoenRavagerTimer","GLOBAL")
+	OR(2)
+	Dead("Imoen2")
+	PartyRested()
+THEN
+   RESPONSE #100
+	SetGlobal("ImoenRavagerTimer","GLOBAL",1)
+END
+
+IF
+	Global("IRTImoenRavagerTransformation","GLOBAL",3)
+	GlobalTimerExpired("ImoenRavagerTimer","GLOBAL")
+	!Dead("Imoen2")
+	InParty("Imoen2")
+THEN
+   RESPONSE #100
+    SetGlobal("IRTImoenRavagerTransformation","GLOBAL",4)
+	ChangeEnemyAlly(Myself,PC)
+	ClearAllActions()
+	ReallyForceSpellRES("endrav",Myself)
+	PlayDead(45)
+	MakeUnselectable(2)
+END
+
+//final talk
+IF
+	Global("IRTImoenRavagerTransformation","GLOBAL",4)
+	See(Player1)
+	InParty("Imoen2")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+    SetGlobal("IRTImoenRavagerTransformation","GLOBAL",5)
+    StartDialogueNoSet(Player1)
+END
+
+//give power
+IF
+    Global("IRTImoenIsRavager","GLOBAL",1)
+	Global("IRTImoenRavagerTransformation","GLOBAL",6)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+    SetGlobal("IRTImoenRavagerTransformation","GLOBAL",7)
+    DisplayStringHead("Imoen2",@1)
+	
+	//ApplySpellRES("giverav","Imoen2")
+
+END
+IF
+	Global("IRTImoenRavagerTransformation","GLOBAL",7)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	PartyRested()
+THEN
+   RESPONSE #100
+    SetGlobal("IRTImoenRavagerTransformation","GLOBAL",8)
+    DisplayStringHead("Imoen2",@2)
+	
+	ApplySpellRES("giverav","Imoen2")
+END
+
+//actually use power
+IF
+    Global("ravageim","GLOBAL",1)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+    RealSetGlobalTimer("ImUseRavTimer","GLOBAL",30)
+	SetGlobal("ravageim","GLOBAL",2)
+	DisplayStringHead("Imoen2",@3)  
+    ReallyForceSpellRES("ravagim",Myself)
+	//ChangeEnemyAlly(Myself,NOTGOOD)
+    //Enemy()
+	//AttackReevaluate(NearestEnemyOf(Myself),45)
+	//Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    Global("ravageim","GLOBAL",2)
+	Dead("Imoen2")
+	InPartyAllowDead("imoen2")
+THEN
+   RESPONSE #100
+	SetGlobal("ImUseRavTimer","GLOBAL",1)
+END
+
+
+//End power
+IF
+	RealGlobalTimerExpired("ImUseRavTimer","GLOBAL")
+    Global("ravageim","GLOBAL",2)
+	InPartyAllowDead("imoen2")
+	!Dead("Imoen2")
+THEN
+   RESPONSE #100
+	SetGlobal("ravageim","GLOBAL",0)
+	ChangeEnemyAlly(Myself,PC)
+	ClearAllActions()
+	ReallyForceSpellRES("endrav",Myself)
+	PlayDead(45)
+	MakeUnselectable(2)
+END
+
+
+//give power
+IF
+    Global("IRTImoenControlsSlayer","GLOBAL",1)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+    SetGlobal("IRTImoenControlsSlayer","GLOBAL",2)
+    DisplayStringHead("Imoen2",@4)  
+	ApplySpellRES("giveslay","Imoen2")
+END
+
+//actually use power
+IF
+    Global("slayerim","GLOBAL",1)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+	SetGlobal("slayerim","GLOBAL",2)
+	ReallyForceSpellRES("slayim2",Myself)
+END
+
+//if do something stupid like rest with slayer on
+IF
+    Global("slayerim","GLOBAL",2)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	PartyRested()
+THEN
+   RESPONSE #100
+	SetGlobal("slayerim","GLOBAL",0)
+	ReallyForceSpellRES("endslay",Myself)
+END
+	
+	
+
+//Increment IRTFightTaintCount starts from 1 really, when going into combat
+IF
+    !Global("IRTEnteredCombat","GLOBAL",1)
+	!Global("IRTFightTaintCount","GLOBAL",0)
+	GlobalLT("IRTFightTaintCount","GLOBAL",5)
+	See(NearestEnemyOf(Myself))
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	ActuallyInCombat()
+THEN
+   RESPONSE #100
+    SetGlobal("IRTEnteredCombat","GLOBAL",1)
+END
+
+IF
+     Global("IRTEnteredCombat","GLOBAL",1)
+	!Global("IRTFightTaintCount","GLOBAL",0)
+	GlobalLT("IRTFightTaintCount","GLOBAL",5)
+	!ActuallyInCombat()
+THEN
+   RESPONSE #100
+    SetGlobal("IRTEnteredCombat","GLOBAL",2)
+	IncrementGlobal("IRTFightTaintCount","GLOBAL",1)
+END
+
+//end combat 4th time, talk about fighting taint
+IF
+	Global("IRTFightTaintCount","GLOBAL",5)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!ActuallyInCombat()
+THEN
+   RESPONSE #100
+    IncrementGlobal("IRTFightTaintCount","GLOBAL",1)
+	SetGlobal("IRTResistTheSlayer","GLOBAL",1)
+    StartDialogueNoSet(Player1)
+END
+
+//after above talk, she gains +1 constitution
+IF
+	Global("IRTResistTheSlayer","GLOBAL",2)
+	InParty("Imoen2")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+   RESPONSE #100
+    SetGlobal("IRTResistTheSlayer","GLOBAL",3)
+    ReallyForceSpell("Imoen2",GAIN_ONE_CON_PERMANENT)
+	ReallyForceSpell("Imoen2",GAIN_ONE_INT_PERMANENT)
+    DisplayStringHead("Imoen2",@5) 
+END
+
+
+

@@ -1,0 +1,16 @@
+IF
+   True()
+THEN
+   RESPONSE #100
+   CutSceneID(Player1)
+   ActionOverride("Imoen2",PlayDeadInterruptable(5))
+   MoveViewObject("Imoen2",VERY_FAST)
+   Wait(3)
+   DisplayStringHead("Imoen2",@0)
+   Wait(4)
+   ActionOverride("Imoen2",MoveToPoint([2014.1426]))
+   MoveViewObject(Player1,VERY_FAST)
+   Wait(6)
+   ActionOverride("Imoen2",StartDialog("IMOEN25J","Imoen2")
+END
+

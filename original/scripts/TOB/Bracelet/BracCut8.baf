@@ -1,0 +1,22 @@
+
+IF 
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId("Imoen2")
+	ActionOverride("Sorenthis",DisplayStringHead(Myself,@0))
+    Wait(2)
+	ActionOverride("Sorenthis",CreateVisualEffectObject("spunholy",Myself))
+	PlaySound("EFF_P69")
+	 SmallWait(22)
+	//Wait(2)
+	ActionOverride("Sorenthis",DestroySelf())
+	Wait(2)
+	DisplayStringHead(Myself,@1)
+	ApplySpellRES("GIVESORE","Imoen2")
+	ApplySpellRES("GIVESORE","Imoen2")
+    ApplySpellRES("GIVESORE","Imoen2")
+	Wait(2)
+	EndCutSceneMode()
+END
+	

@@ -1,0 +1,24 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	FadeToColor([30.0],0)
+      Wait(3)
+	ActionOverride("ImDrea2",DestroySelf())
+	ActionOverride("HyounFc2",DestroySelf())
+	ActionOverride("Hyounim2",DestroySelf())
+	RestorePartyLocations()
+	MultiPlayerSync()
+	RestParty()
+	Wait(2)
+      MoveViewObject(Player1,0)
+	FadeFromColor([30.0],0)
+	Wait(4)
+	SetGlobal("Dream3passed","GLOBAL",2)
+	DisplayStringHead(Myself,@0)
+	Wait(3)
+	AddJournalEntry(@1,INFO)
+	ApplySpell(Player1,DISPEL_NO_SAVE)
+	EndCutSceneMode()
+END

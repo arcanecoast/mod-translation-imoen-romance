@@ -1,0 +1,1146 @@
+/* Table of Contents */
+
+// NOTE: The Globals for all of these epilogues have already been set at some point in the dialogue files.
+// If the conditions for none of these epilogues apply, then (and only then) display the non-mod epilogue.
+
+// Ascending as equals
+	// Good or Neutral player equal gods @100
+	// Evil Player equal gods @101
+// Ascending as loved Handmaiden
+	// Good or Neutral Player @110
+	// Evil Player @111
+// Ascending as sibling Handmaiden
+	// Good or Neutral Player @120
+	// Evil Player @121
+// Imoen Left Behind 
+	// Madly In Love
+		// Good Player @200
+		// Lawful Neutral Player @201
+		// True Neutral Player @202
+		// Chaotic Neutral Player @203
+		// Evil Player @204
+		// Good / Neutral Player with Aerie Friendship @205
+		// Evil Player with Aerie Friendship @206
+	// Regular Romance
+		// Aerie Friendship @210
+		// No Aerie Friendship @211
+	// Not Romanced, Aerie Friendship, player ascended @212
+	// Not Romanced, Aerie Love, player ascended @213
+// Player Stays Mortal
+	// Madly in Love
+		// Good Player, No Aerie, No Marriage @300
+		// Good Player, No Aerie, Marriage @301
+		// Good Player, Aerie, No Marriage @302
+		// Good Player, Aerie, Marriage @303
+		// Neutral Player, No Aerie, No Marriage @304
+		// Neutral Player, No Aerie, Marriage @305
+		// Neutral Player, Aerie, No Marriage @306
+		// Neutral Player, Aerie, Marriage @307
+		// Evil Player, No Aerie, No Marriage @308
+		// Evil Player, No Aerie, Marriage @309
+		// Evil Player, Aerie, No Marriage @310
+		// Evil Player, Aerie, Marriage @311
+	// Regular Romance 
+		// Good Player, No Aerie, No Marriage @350
+		// Good Player, No Aerie, Marriage @351
+		// Good Player, Aerie, No Marriage @352
+		// Good Player, Aerie, Marriage @353
+		// Neutral Player, No Aerie, No Marriage @354
+		// Neutral Player, No Aerie, Marriage @355
+		// Neutral Player, Aerie, No Marriage @356
+		// Neutral Player, Aerie, Marriage @357
+		// Evil Player, No Aerie, No Marriage @358
+		// Evil Player, No Aerie, Marriage @359
+		// Evil Player, Aerie, No Marriage @360
+		// Evil Player, Aerie, Marriage @361
+	// Not Romanced, Aerie Love, mortal player @400
+	// Imoen was kicked out and friended Aerie is still in party @401
+	// Not romanced, Aerie Friendship, mortal player @402
+// Broke up at Throne of Blood, Aerie @500
+// Broke up at Throne of Blood, No Aerie @501
+
+// Each epilogue below lists the conditions under which they display.	
+	
+/* Imoen's Original Epilogue:
+
+And what of Imoen, the eternal child? She had long stood in the shadow of <CHARNAME>, but she was her own person and would find her fate where she pleased. She returned to Candlekeep for a time, her formidable skill in magic granting a greater appreciation for its tomes. It was smaller than she remembered, however, and she did not stay long. Later, she was seen in such vaunted company as Khelben "Blackstaff" and Elminster, by all accounts encouraging them to not be such stick-in-the-muds. Her influence grew over time, and she may have founded a thieves' guild that now operates all the way to Neverwinter. When asked of this, she always answered with a smile of purest innocence. "Heya," she would say, "it's just me, Imoen."
+
+Imoen's Ascension Mod Epilogue:
+
+And what of Imoen, the eternal child?  She had been through much during her travels with <CHARNAME>, things that she would refuse to discuss later in life, but her spirit had never been broken.  She parted ways from her companions to seek her own destiny, out from under the shadow of her <PRO_BROTHERSISTER>.  She returned to Candlekeep for a short time, her formidable skill in magic granting her a greater appreciation for its tomes.  Here she could remember simpler times with <CHARNAME> and Gorion, and feel glad that she had followed in her foster-father's footsteps.  Though asked to remain, Imoen eventually decided that Candlekeep was much smaller than she remembered and left to pursue adventures abroad.
+Many are the tales of the archmage that Imoen became.  She wore many other names throughout her life, some mysterious and foreboding while others odd and quirky considering the power this great woman possessed.  Anyone who had known Imoen in her youth would immediately recognize her despite any name, however...no amount of age or wisdom could disguise the mischievious twinkle in her eyes or the ready grin to greet a friend.  She became the confidante of Khelben "Blackstaff" Arunson and was oft-associated with a tale involving the great Elminster, supposedly picking the sage's pocket one day and then leading him on a merry magical chase across Faerun for four months.  The exact truth of the tale is unknown...though it's certainly not  unlike Imoen to encourage an old codger to not be such a stick-in-the-mud, and her later friendship with Elminster is well-documented.  Later tales say Imoen founded a thieves guild that operated all the way to Neverwinter, sparred with the Shadow Thieves and the Zhentarim and even duelled a dragon because (so the story goes) "he was rude".  At times, Imoen was known to think back on her old friend, <CHARNAME>, and smile sadly...and then immediately be possessed with a wickedly funny thought that would propel her onto her next scheme.  It seems that some people, thankfully, will never change.
+
+*/
+
+
+// Ascending as Equals
+
+// Good or Neutral player equal gods
+/*
+InParty("Imoen2")
+Global("IRTEpAscendedFull","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+*/
+@100 =
+~Despite her initial apprehensions, godhood didn't fundamentally alter Imoen's outlook overmuch. As <CHARNAME>'s other divine half, she took to her new role in the same light-hearted way she approached mortal life, soon endearing herself to some of the more benevolent powers in the pantheon. Perhaps most notably, she struck an unlikely friendship with Mystra - in no small part due to Elminster's good word on her behalf after her personal involvement against a cadre of corrupt wizards in Neverwinter.
+  
+Her whimsical approach to godhood frequently belied Imoen's cunning, repeatedly leading her foes to underestimate her abilities or dismiss her altogether as just another of <CHARNAME>'s lackeys. A lifetime of working together proved invaluable for the couple, their flawless synergy ensuring that no plot against their rising power could do any real harm. Imoen took it upon herself to develop a network of eyes and ears that ran much like a thieves' guild, with acolytes, recruits and assorted allies operating all through the astral planes, gathering intelligence and guarding the new gods from unforeseen threats.
+
+With Cyric zealously in charge of Bhaal's portfolio, Imoen and <CHARNAME> were free to bend the god's foul essence to their will and pursue any agenda they desired. While still supporting all of <CHARNAME>'s worthy efforts, as time passed Imoen pushed for the prevalence of freedom above all else. Eventually she became a patron of the unjustly imprisoned, the tortured, the captive. Through her influence many slaver rings were uncovered and dismantled, while brutal warlords and tyrants were deposed in her name. Although her deeds were often accomplished subtly and with little bloodshed, her avatar was reportedly seen in the battle lines when the occasion arose - all claims ultimately unsubstantiated, of course. However, she did not take kindly to rightfully convicted felons invoking her name. Many a heinous criminal was found levitating upside-down inside their cells and appropriately chastised, be it soap-mouthed, tarred and feathered, or stark naked.
+
+Imoen's restless nature would often lead her far and wide in the multiverse, sometimes in fanciful, even harebrained pursuits... yet the link she shared with <CHARNAME> would always remain strong, like a pulsing beacon within their joined souls, always keeping each other company. Regardless of distance, duty or dire threats to their power, Imoen and <CHARNAME>'s love would thrive for century after joyful century, secure in an unbreakable bond that not even the gods themselves could tarnish.
+~
+
+// Evil Player equal gods
+/*
+InParty("Imoen2")
+Global("IRTEpAscendedFull","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+*/
+@101 =
+~Imoen's ascension to godhood took a steep toll on her spirit. As one half of a whole, she could no longer retreat to the role of an underling to justify her actions, and so was required to take proactive part in <CHARNAME>'s foul schemes, personally deceiving, betraying and slaughtering where it was fit. Perhaps most notably, it was she who orchestrated Cyric's downfall, manipulating the insane god alongside Shar to attempt murder on Mystra, only to warn her ahead of time and fatally strike back at the Prince of Lies - securing both Cyric's usurped portfolio and Mystra's gratitude.
+
+The nefarious deeds done by the couple as they clawed their way to prominence are best left unsaid. Suffice to state that Imoen gave it her all, just as she had promised. In those first years she'd find her only solace in <CHARNAME>'s attentions, which remained as considerate and devoted as ever when confined to the privacy of their lavish accommodations within the Abyss. Her inner struggle stayed a silent one, though this was not to last.
+
+Despite her attempts at embracing <CHARNAME>'s outlook, Imoen was ultimately unable to ignore her nature and silence her conscience. At first gently, then wilfully, she voiced her discontent once they had secured a stable foothold in the pantheon. Armed with the knowledge that she held near equal power to her beloved counterpart, every misdeed and deleterious plot soon became a bargaining process whereby Imoen would push for a goal of her own in return. <CHARNAME> found no option but to comply in order to see <PRO_HISHER> will done, as their divine power was irrevocably linked and intertwined. One could not act without the other's consent.
+
+Far from acting as each other's foil, the result was a joint deity steeped in duality, providing an unwitting, whimsical balance to their overall influence. For every murder there was a mercy. For every warlord favored, a slaver struck down. Whenever not involved in the gods' plots and rivalries, Imoen would seek to spread freedom above all else, eventually becoming the vengeful patron of the unjustly imprisoned, the tortured, the captive - and woe to the rightfully convicted felon that foolishly invoked her name.
+
+Though the arguments were frequent and anger a common occurrence, fights between them did not last long, and Imoen and <CHARNAME> always presented a united front in full, ruthless force when the need arose. For after all, the love that had brought them together was as deep as it was genuine... and so it would remain, for century after complicated century. 
+~
+
+// Ascending as loved Handmaiden
+
+	// Good or Neutral Player divine handmaiden romance
+/*
+InParty("Imoen2")
+Global("IRTEpAscendedMaiden","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+*/
+@110 =
+~Ascension didn't much change Imoen's outlook on her existence. She took to her new role as divine handmaiden and <CHARNAME>'s advocate in the same light-hearted way she approached mortal life, soon endearing herself to some powerful players in the pantheon. Perhaps most notably, she struck an unlikely friendship with Mystra - in no small part due to Elminster's good word after Imoen's assistance against a cadre of corrupt wizards in Neverwinter. Their shared love for the Art surely helped.
+  
+Her whimsical approach to divinity frequently belied Imoen's cunning, repeatedly leading <CHARNAME>'s foes to underestimate her abilities or dismiss her altogether as just another of <PRO_HISHER> lackeys. A lifetime of working together proved invaluable for the couple, their combined might ensuring that no plot against their power could do any real harm. Imoen took it upon herself to develop a network of eyes and ears that ran much like a thieves' guild, with acolytes, recruits and assorted allies operating all through the astral planes, gathering intelligence and guarding her beloved from unforeseen threats.
+
+With Cyric zealously in charge of Bhaal's portfolio, <CHARNAME> was free to bend the god's foul essence to <PRO_HISHER> will and pursue any agenda <PRO_HESHE> desired. While still supporting all of <CHARNAME>'s worthy efforts, Imoen grew to value freedom of the people above all else, often making the case for <CHARNAME> to get involved in such issues. Through her influence or even direct intervention many slaver rings were uncovered and dismantled, brutal warlords and tyrants deposed and done away with. Although she'd always favor subtle methods over raw force, Imoen herself was reportedly seen in the battle lines when the occasion arose - though all claims were ultimately unsubstantiated, of course. However, she did not take kindly to rightfully convicted felons invoking her or <CHARNAME>'s name. Many a heinous criminal was found levitating upside-down inside their cells and appropriately chastised, be it soap-mouthed, tarred and feathered, or stark naked.
+
+Imoen's restless nature would often lead her far and wide in the multiverse, sometimes in fanciful, even harebrained pursuits whenever relative calm would allow... yet the link she shared with <CHARNAME> would always remain strong, like a pulsing beacon within their souls, always keeping each other company for century after century.
+
+In the end, their love proved to be a bond that not even the gods themselves could tarnish.
+~
+
+	// Evil Player divine handmaiden romance
+/*
+InParty("Imoen2")
+Global("IRTEpAscendedMaiden","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+*/
+@111 =
+~Imoen, <CHARNAME>'s herald and divine handmaiden, gave her new role her all from the very beginning. It was a hectic time during which she embraced <CHARNAME>'s foul schemes as her own, personally deceiving, betraying and slaughtering where it was fit. Perhaps most notably, it was she who discovered Shar's and Cyric's plot to assassinate Mystra. At <CHARNAME>'s behest she warned the keeper of the Weave, and with their combined might they struck down the Prince of Lies, securing both Cyric's usurped portfolio and Mystra's gratitude.
+
+The nefarious deeds done by the couple in the name of <CHARNAME>'s advancement are best left unsaid. Imoen's battered conscience would find solace in <CHARNAME>'s attentions, which remained as considerate and devoted as ever when confined to the privacy of their lavish accommodations within the Abyss. Even then, ascension took a steep toll on her spirit, though the effects only came to surface at a much later time.
+
+Jaded and downbeat after countless years of service, of leadership, of leaning onto lesser powers for their servitude, of swiftly doled punishments and ruthlessness, Imoen was ultimately unable to ignore her long neglected good nature. She voiced her discontent once <CHARNAME> had a strong choke-hold upon a large portion of the pantheon. She pleaded for a respite, citing her proven love and devotion, well aware of being subject to <CHARNAME>'s mercy. Should she be able to pursue her own cause, she would regain the joy that for so long had been missing. If she continued like she had been, it would not be long until she sought to end her own existence. The soul link between the two made the truth in Imoen's words clear: <CHARNAME> knew with divine certainty that should <PRO_HESHE> let Imoen free, <PRO_HESHE> would keep the one <PRO_HESHE> loved. Should <PRO_HESHE> refuse, <PRO_HESHE> would lose both herald and consort. Perhaps most importantly, <CHARNAME> was more than secure enough in <PRO_HISHER> power to no longer need her as an ally, and so <PRO_HESHE> agreed to Imoen's terms.
+
+She was free at last to roam the planes, no longer tethered to <CHARNAME>'s agenda, but still very much linked to <PRO_HISHER> essence. Imoen's restlessness would lead her far and wide in the multiverse, indulging in fanciful, even harebrained pursuits that would defy mortal comprehension... yet the bond she shared with <CHARNAME> would always remain, like a pulsing beacon within their souls, always keeping each other company for century after complicated century. No matter how far she traveled, she would always come back, and their love would always remain at arm's reach.
+~
+
+// Ascending as Sibling Handmaiden
+
+	// Good or Neutral Player divine handmaiden no romance
+
+/*
+InParty("Imoen2")
+Global("IRTEpAscendedMaiden2","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+*/
+@120 =
+~Ascension didn't much change Imoen's outlook on her existence. She took to her new role as divine handmaiden and <CHARNAME>'s advocate in the same light-hearted way she approached mortal life, soon endearing herself to some powerful players in the pantheon. Perhaps most notably, she struck an unlikely friendship with Mystra - in no small part due to Elminster's good word after Imoen's assistance against a cadre of corrupt wizards in Neverwinter. Their shared love for the Art surely helped.
+  
+Her whimsical approach to divinity frequently belied Imoen's cunning, repeatedly leading <CHARNAME>'s foes to underestimate her abilities or dismiss her altogether as just another of <PRO_HISHER> lackeys. A lifetime of working together proved invaluable for the pair, their combined might ensuring that no plot against their power could do any real harm. Imoen took it upon herself to develop a network of eyes and ears that ran much like a thieves' guild, with acolytes, recruits and assorted allies operating all through the astral planes, gathering intelligence and guarding her sibling from unforeseen threats.
+
+With Cyric zealously in charge of Bhaal's portfolio, <CHARNAME> was free to bend the god's foul essence to <PRO_HISHER> will and pursue any agenda <PRO_HESHE> desired. While still supporting all of <CHARNAME>'s worthy efforts, Imoen grew to value freedom of the people above all else, often making the case for <CHARNAME> to get involved in such issues. Through her influence or even direct intervention many slaver rings were uncovered and dismantled, brutal warlords and tyrants deposed and done away with. Although she'd always favor subtle methods over raw force, Imoen herself was reportedly seen in the battle lines when the occasion arose - though all claims were ultimately unsubstantiated, of course. However, she did not take kindly to rightfully convicted felons invoking her or <CHARNAME>'s name. Many a heinous criminal was found levitating upside-down inside their cells and appropriately chastised, be it soap-mouthed, tarred and feathered, or stark naked.
+
+Imoen's restless nature would often lead her far and wide in the multiverse, sometimes in fanciful, even harebrained pursuits whenever relative calm would allow. Yet the link she shared with <CHARNAME> ensured she'd always remain at arm's reach, ready to defend her sibling at the slightest offense, ever willing to lead the charge against those that would threaten <PRO_HISHER> claim to the astral planes. As it was in life, Imoen and <CHARNAME> remained in each other's company to the last of their days.
+~
+
+	// Evil Player divine handmaiden no romance
+/*
+InParty("Imoen2")
+Global("IRTEpAscendedMaiden2","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+*/
+@121 =
+~Imoen, <CHARNAME>'s herald and divine handmaiden, gave her all to her new role from the very beginning. It was a hectic time during which she embraced <CHARNAME>'s foul schemes as her own, personally deceiving, betraying and slaughtering where it was fit. Perhaps most notably, it was she who discovered Shar and Cyric's plot to assassinate Mystra. At <CHARNAME>'s calculated behest she warned the keeper of the Weave, and with their combined might they struck down the Prince of Lies, securing both Cyric's usurped portfolio and Mystra's gratitude.
+
+The nefarious deeds done by the couple in the name of <CHARNAME>'s advancement are best left unsaid. Though battered, Imoen's conscience took refuge in power as she continued to push herself as far as she could go, reaching a level of mastery in the Art that no mortal could have attained. Even then, ascension took a steep toll on her spirit, though the effects only came to surface at a much later time.
+
+Jaded and downbeat after countless years of service, of leadership, of leaning onto lesser powers for their servitude, of swiftly doled punishments and ruthlessness, Imoen was ultimately unable to ignore her long neglected good nature. She voiced her discontent once <CHARNAME> had a strong choke-hold upon a large portion of the pantheon. She pleaded for a release from service, citing her proven loyalty and devotion, promising to always return when the need arose, as she was well aware of being subject to <CHARNAME>'s mercy. Should she be able to pursue her own cause, she would regain the joy that for so long had been missing. If she continued like she had been, it would not be long until she sought to end her own existence.
+
+Linked as they were through their divine souls, the truth in Imoen's words was plain to <CHARNAME>. Though chafed at the partial loss of such an asset, <PRO_HISHER> affection for <PRO_HISHER> sibling had always been genuine, and Imoen's loyalty indeed remained without blemish. Perhaps most importantly, <CHARNAME> was more than secure enough in <PRO_HISHER> power to no longer need her as an ally, and thus <PRO_HESHE> reluctantly agreed to Imoen's request.
+
+And so Imoen was free at last to roam the planes, no longer tethered to <CHARNAME>'s agenda, but still very much linked to <PRO_HISHER> essence. Imoen's restlessness would lead her far and wide in the multiverse, indulging in fanciful, even harebrained pursuits that would defy mortal comprehension... yet the bond she shared with <CHARNAME> would always remain, drawing her back in times of dire need to fight alongside her dear <PRO_BROTHERSISTER>, laying down her life for <CHARNAME> century after century, just like she'd always done in Faerun.
+~
+
+// Imoen Left Behind
+
+	// Madly in love left behind, Good player
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+*/
+@200 =
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. Soon Imoen gave herself to the study of the magic tomes in the library's shelves, furthering her mastery of the Art if only to distract herself from the inescapable ache in her chest. 
+
+If anything, her stay only increased her yearning for what she'd lost. Every painting, every room, even the walls themselves would remind her of <CHARNAME>, as the keep was flooded with memories of their childhood together. The time they'd shared became enshrined in her mind as pictures of perfection, the joy she had felt in <PRO_HISHER> intimate company comparable to nothing else in existence. Time, far from dulling the pain, only let it spread ever deeper into Imoen's soul.
+
+Aware of the destructive nature of this pain but unable to stop it, Imoen saw but one solution to her problem. She would become worthy of the pantheon through her merits alone. She would prove <CHARNAME> wrong by becoming <PRO_HISHER> champion.
+
+Once more Imoen took to the road, traveling far and wide, compelled to any region rife with injustice, tyranny or evil. Tirelessly she sought to end oppression and lawlessness, cruelty and brutality wherever she found it - singlehandedly shutting down slaver rings, deposing despots, stopping warlords and evil cults. She was relentless in her pursuit of ever more powerful magic, pushing at the frontier of Mystra's laws. Not before long she was hailed a hero, and a leader not long after that, gathering a following that further enabled her to spread <CHARNAME>'s gospel of proactive benevolence through the realms. And in the quiet of her bedside Imoen would pray to <CHARNAME> now and then, a fervent whisper that mentioned not mercy nor favor, longing or devotion. She prayed with naught but a promise: I will find you again.
+
+Imoen vanished from Abeir-Toril shortly after her last campaign, a protracted affair that rooted out a vast network of Cyric cultists from the depths of Neverwinter. Though she left clear instructions to her lieutenants on where to take the Tyrant's Haunt - she'd had sooner stab her own hand than call it The Church of <CHARNAME> - there were no clues as to where she might have gone. Speculation was rampant, but only one fact remained certain: Imoen was never again seen in the land of mortals.
+
+And perhaps it was only appropriate. Steeped well into her forties, her power was said to have risen beyond that of a demigod...
+~
+
+	// Madly in love left behind, lawful neutral player
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+Alignment(Player1,LAWFUL_NEUTRAL)
+*/
+@201 =	
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. Soon Imoen gave herself to the study of the magic tomes in the library's shelves, furthering her mastery of the Art if only to distract herself from the inescapable ache in her chest. 
+
+If anything, her stay only increased her yearning for what she'd lost. Every painting, every room, even the walls themselves would remind her of <CHARNAME>, as the keep was flooded with memories of their childhood together. The time they'd shared became enshrined in her mind as pictures of perfection, the joy she had felt in <PRO_HISHER> intimate company comparable to nothing else in existence. Time, far from dulling the pain, only let it spread ever deeper into Imoen's soul.
+
+Aware of the destructive nature of this pain but unable to stop it, Imoen saw but one solution to her problem. She would become worthy of the pantheon through her merits alone. She would prove <CHARNAME> wrong by becoming <PRO_HISHER> champion.
+
+Once more Imoen took to the road, traveling far and wide, compelled to any region rife with lawlessness and chaos. Tirelessly she sought to root out crime and corruption wherever she found it - singlehandedly shutting down illegal slaver and smuggling rings, bringing the full brunt of local law to criminal networks. She was relentless in her pursuit of ever more powerful magic, adhering closely to the very limits of Mystra's rules. Not before long she was hailed a champion, and a leader not long after that, gathering a following that further enabled her to spread through the realms <CHARNAME>'s gospel of prosperity through law. And every night she would pray to <CHARNAME> by the quiet of her bedside, a fervent whisper that mentioned not mercy nor favor, longing or devotion. She prayed with naught but a promise: I will find you again.
+
+Imoen vanished from Abeir-Toril shortly after her last campaign, a protracted affair that at the Watch's behest methodically dismantled the Garnet Hand, the largest network of organized crime in Waterdeep. Though she left clear instructions to her lieutenants on where to take the Outlaw's Bane - she'd had sooner stab her own hand than call the organization "The Church of <CHARNAME>" - there were no clues as to where she might have gone. Speculation was rampant, but only one fact remained certain: Imoen was never again seen in the land of mortals.
+
+Steeped well into her forties, her power was said to have risen beyond that of a demigod...
+~
+
+	// Madly in love left behind, true neutral player
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+Alignment(Player1,TRUE_NEUTRAL)
+*/
+@202 =
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. Soon Imoen gave herself to the study of the magic tomes in the library's shelves, furthering her mastery of the Art if only to distract herself from the inescapable ache in her chest. 
+
+If anything, her stay only increased her yearning for what she'd lost. Every painting, every room, even the walls themselves would remind her of <CHARNAME>, as the keep was flooded with memories of their childhood together. The time they'd shared became enshrined in her mind as pictures of perfection, the joy she had felt in <PRO_HISHER> intimate company comparable to nothing else in existence. Time, far from dulling the pain, only let it spread ever deeper into Imoen's soul.
+
+Aware of the destructive nature of this pain but unable to stop it, Imoen saw but one solution to her problem. She would become worthy of the pantheon through her merits alone. She would prove <CHARNAME> wrong by becoming <PRO_HISHER> champion.
+
+Once more Imoen took to the road, traveling far and wide, compelled to regions where nature's balance was most upset. Tirelessly she sought to root out corruption and destructive progress both - though the scales would most often need to be tipped away from evil, she didn't shy away from preventing rampant deforestation or resource exhaustion in the name of civil development. Soon the Harpers took an interest in recruiting her, but Imoen had no plans of following anyone else's lead. She was relentless in her pursuit of ever more powerful magic, adhering closely to the very limits of Mystra's laws. As she grew in notoriety through word and deed, disgruntled Harpers and like-minded individuals joined her cause, forming a tight-knit group that eventually developed into a network of independent cells spread throughout Faerun and beyond. Sometimes covertly, most often brazenly, they advanced <CHARNAME>'s gospel of prosperity through balance in all things. And in the quiet of her bedside Imoen would pray to <CHARNAME> now and then, a fervent whisper that mentioned not mercy nor favor, longing or devotion. She prayed with naught but a promise: I will find you again.
+
+Imoen vanished from Abeir-Toril shortly after her last campaign, a protracted affair that saw the complete cleansing and restoration of the Kryptgarden ruins. Though she left clear instructions to her lieutenants on where to take the Keepers, there were no clues as to where she might have gone. Speculation was rampant, but only one fact remained certain: Imoen was never again seen in the land of mortals.
+
+And perhaps it was only appropriate. Steeped well into her forties, her power was said to have risen beyond that of a demigod...
+~
+
+	// Madly in love left behind, Chaotic Neutral Player
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+Alignment(Player1,CHAOTIC_NEUTRAL)
+*/
+@203 =
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. Soon Imoen gave herself to the study of the magic tomes in the library's shelves, furthering her mastery of the Art if only to distract herself from the inescapable ache in her chest. 
+
+If anything, her stay only increased her yearning for what she'd lost. Every painting, every room, even the walls themselves would remind her of <CHARNAME>, as the keep was flooded with memories of their childhood together. The time they'd shared became enshrined in her mind as pictures of perfection, the joy she had felt in <PRO_HISHER> intimate company comparable to nothing else in existence. Time, far from dulling the pain, only let it spread ever deeper into Imoen's soul.
+
+Aware of the destructive nature of this pain but unable to stop it, Imoen saw but one solution to her problem. She would become worthy of the pantheon through her merits alone. She would prove <CHARNAME> wrong by becoming <PRO_HISHER> champion.
+
+But how to champion chaos without enabling evil? Once more Imoen took to the road, traveling far and wide, doing exactly as she pleased and opposing whoever made her mad. She would often focus on fighting oppression and tyranny where she went, deposing despots and repressive governments and letting the chips fall where they may. Perhaps most notably, with great satisfaction she single-handedly blew up the rehabilitated Spellhold and dismantled the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen.
+
+To every aspiring adventurer and admirer she met, her words were clear: go out and do what you will, regardless of rules or constraints - and if you do something that makes me angry, you'll end up with your head on fire. She was relentless in her pursuit of ever more powerful magic, fighting to reach and surpass the limits of Mystra's laws, and at no point in her life did she settle into any form of routine. Now and then Imoen would pray to <CHARNAME>, a fervent whisper that mentioned not mercy nor favor, longing or devotion. She prayed with naught but a promise: I will find you again.
+
+Imoen vanished from Abeir-Toril shortly after her last known escapade, a city-wide incident in Neverwinter between her and the Council of Nine that somehow ended in a herd of pink-tinted elephants rampaging through the streets. Though speculation was wide-spread, there were no clues as to where she might have gone. Imoen was never again seen in the land of mortals.
+
+And perhaps it was only appropriate. Steeped well into her forties, her power was said to have risen beyond that of a demigod...
+~
+
+	// Madly in love left behind, Evil player
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+*/
+@204 =
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. Soon Imoen gave herself to the study of the magic tomes in the library's shelves, furthering her mastery of the Art if only to distract herself from the inescapable ache in her chest. 
+
+Her stay only seemed to make the loss more poignant. Every painting, every room, even the walls themselves would remind her of <CHARNAME>, as the keep was flooded with memories of their childhood together. Yet, slowly, the time they'd shared lost its luster in her mind, the joy she remembered tainted by ever more prevalent thoughts of <CHARNAME>'s true nature. Though she never doubted the sincerity of <CHARNAME>'s feelings toward her, more and more it became clear that her childhood friend was not deserving of such single-minded devotion. Be it from wisdom, selfish ambition or unrequited longing, <CHARNAME>'s rejection had been the right choice for all parties involved.
+
+After a few years of this quiet life of healing, study and contemplation, Imoen felt once more ready to take to the road. She traveled far and wide, reclaiming her dreams of seeing everything the world had to offer. Her former sense of wonder was a hard thing to recover, however, tarnished and embittered as it had been by her experiences during the Bhaalspawn saga. Her intentions of simple tourism drifted toward adventure, and adventure morphed into fixing the things that made her mad: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer Imoen's personally developed Polymorph Other spell. A small cattle ranch in the outskirts of Athkatla thrives to this day as a result of her exploits.
+
+Though later she was seen in such vaunted company as Khelben "Blackstaff" and Elminster, Imoen shied away from outright heroism. To the last of her days her life remained as her relationship with <CHARNAME> had been: unpredictable and complicated, but undeniably fun.
+~
+
+	// Madly in love left behind Good / Neutral Player with Aerie Friendship - TODO: Prevent Aerie's epilogue from displaying
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+*/
+@205 =
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned with Aerie to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. The Avariel elf encouraged Imoen to gave herself to the study of the magic tomes in the library's shelves, if only to distract herself from the inescapable ache in her chest.
+
+Together they spent a few years in this quiet life of healing, study and contemplation, with Aerie doing everything she could to nurse Imoen away from the clutches of depression. With time and Aerie's careful counsel, Imoen eventually reclaimed her former dreams of seeing everything the world had to offer. Imoen and Aerie took to the road and traveled the Realms together for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women grew passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt."
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+	
+	// Madly in love left behind Evil Player with Aerie Friendship - Prevents Aerie's epilogue from displaying
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloMad","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+*/
+@206 =
+
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt did little to blunt her heartbreak. Dejected and aimless, she returned with Aerie to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. The Avariel elf encouraged Imoen to gave herself to the study of the magic tomes in the library's shelves, if only to distract herself from the inescapable ache in her chest.
+
+Together they spent a few years in this quiet life of healing, study and contemplation, with Aerie doing everything she could to nurse Imoen away from the clutches of depression. Slowly, the time Imoen had shared with <CHARNAME> lost its luster in her mind, the joy she remembered tainted by ever more prevalent thoughts of <CHARNAME>'s true nature. Though she never doubted the sincerity of <CHARNAME>'s feelings toward her, more and more it became clear that her childhood friend was not deserving of such single-minded devotion. Be it from wisdom, selfish ambition or unrequited longing, <CHARNAME>'s rejection had been the right choice for all parties involved.
+
+Thanks to Aerie's careful counsel, Imoen eventually reclaimed her former dreams of seeing everything the world had to offer. Imoen and Aerie took to the road and traveled the Realms together for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women grew passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt."
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~	
+		
+	// Regular Romance left behind with Aerie Friendship - prevents Aerie's epilogue from displaying
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloStandard","GLOBAL",1)
+*/
+@210 =
+
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt could only help so much to blunt her heartbreak. She returned with Aerie to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. With time and Aerie's careful counsel, Imoen eventually reclaimed her former dreams of seeing everything the world had to offer.
+
+Imoen and Aerie took to the road and traveled the Realms together for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women grew passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt."
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+	
+	// Regular Romance left behind No Aerie Friendship
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpSoloStandard","GLOBAL",1)
+*/
+
+@211 =
+~Though Imoen had tried to steel herself against the possibility of being left behind, the attempt could only help so much to blunt her heartbreak. She returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. She gave herself to the study of the magic tomes in the library's shelves, if only to distract herself from the bitter ache in her chest.
+
+Eventually Imoen felt once more ready to take to the road. She traveled far and wide, reclaiming her dreams of seeing everything the world had to offer. Her former sense of wonder was a hard thing to recover, however, tarnished as it had been by her experiences during the Bhaalspawn saga. Her intentions of simple tourism drifted toward adventure, and adventure morphed into fixing the things that made her mad: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she single-handedly blew up the rehabilitated Spellhold and dismantled the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen.
+
+Though later she was seen in such vaunted company as Khelben "Blackstaff" and Elminster, Imoen shied away from outright heroism. To the last of her days her life remained as her relationship with <CHARNAME> had been: unpredictable and complicated, but undeniably fun.
+~
+	
+	// Not Romanced, Aerie Friendship, player ascended. TODO: Make sure Aerie epilogue doesn't display.
+
+/*
+!Dead("Aerie")
+InParty("Imoen2")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+!Global("IRTImAerWishYes","GLOBAL",1)
+!Global("ImoenRomanceActive","GLOBAL",2)
+!Global("IRTEpBreakup","GLOBAL",1)
+OR(2) 
+	Global("PlayerChoseEssence","GLOBAL",1)
+	Global("ImoenRomanceActive","GLOBAL",3)
+*/
+
+@212 =
+~Imoen and Aerie traveled the Realms together for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women were passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt."
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+	
+	// Not Romanced, Aerie Love, player ascended. TODO: Make sure Aerie epilogue doesn't display.
+
+/*
+!Dead("Aerie")
+InParty("Imoen2")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTImAerWishYes","GLOBAL",1)
+!Global("ImoenRomanceActive","GLOBAL",2)
+!Global("IRTEpBreakup","GLOBAL",1)
+OR(2) 
+	Global("PlayerChoseEssence","GLOBAL",1)
+	Global("ImoenRomanceActive","GLOBAL",3)
+*/
+
+@213 =
+~Imoen and Aerie traveled the realms together for the rest of their lives, never settling down in any one place for too long. Outspoken and unapologetic about their love for one another, they would often challenge anyone that openly disapproved of their relationship. With their mounting reputation the problem resolved itself, as word spread of hecklers being made to levitate in the town square or village green, upside down and stark naked.
+
+Far too many to recount, their adventures slowly drifted toward a cause both women were passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt".
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed beloved - a woman exceptional enough, Aerie would say, to make your innermost wishes come true with naught but a magical word.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+
+// Player stays Mortal
+
+	// Madly in Love, Good Player, No Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+
+@300 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. They had a tearful reunion at Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+	
+	// Madly in Love, Good Player, No Aerie, Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@301 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. It was there that they married, before Gorion's stone memorial within the keep's gardens - a modest ceremony attended by their closest friends and one or two heroes of legend.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the newlyweds to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~	
+	
+	// Madly in Love, Good Player, Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@302 =		
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. Together they had a tearful reunion with Winthrop and visited Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+
+	// Madly in Love, Good Player, Aerie, Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@303 =
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. It was before Gorion's Memorial within the keep's gardens that she officiated the couple's wedding - a modest ceremony attended by their closest friends and one or two heroes of legend.
+
+Though Imoen had developed a new appreciation for the magical tomes in the library's shelves, her wanderlust quickly drove the newlyweds to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+
+	
+
+		// Madly in love, Neutral Player, No Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@304 =
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. They had a tearful reunion at Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their deeds having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+		
+		// Madly in love, Neutral Player, No Aerie, Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@305 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. It was there that they married, before Gorion's stone memorial within the keep's gardens - a modest ceremony attended by their closest friends and one or two heroes of legend.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the newlyweds to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their deeds having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+		
+
+		// Madly in love, Neutral Player, Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@306 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. Together they had a tearful reunion with Winthrop and visited Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their deeds having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+
+		// Madly in love, Neutral Player, Aerie, Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@307 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. It was before Gorion's Memorial within the keep's gardens that she officiated the couple's wedding - a modest ceremony attended by their closest friends and one or two heroes of legend.
+		
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. There they would take a break from the madness and simply enjoy one another, although it would never last too long. Imoen had a habit of becoming restless.
+
+Inseparable until the end, Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their deeds having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms, and their undying love would remain a staple of folk tales for centuries to come.
+~
+		
+	// Madly in love, Evil Player, No Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@308 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". They found it much as it had always been, only... smaller. Despite Imoen's new appreciation for the magical tomes in the library shelves, it was not long until the couple was on the road again.
+
+Much as Imoen had privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, desperately in love and far too afraid to lose what they'd fought so hard to nurture. Aware of Imoen's discomfort, <CHARNAME> tried to shield her beloved from <PRO_HISHER> actions as best <PRO_HESHE> could, for <PRO_HISHER> love was just as deep and genuine.
+
+It was an unsustainable situation. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+Even through all their follies, the couple couldn't stay apart for long. like an insidious addiction their love gnawed at their insides, dousing anger to cinders time and again. Over the years Imoen's worldview drifted closer to <CHARNAME>'s, and <CHARNAME>'s closer to hers in turn. Though still some disagreements would devolve into shouting matches, neither one could escape the near preternatural attraction they felt for one another.
+
+And whenever the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that Imoen would stand by <PRO_HISHER> side, as ready as always to fight for whom she held most dear. 
+~
+
+	// Madly in love, Evil Player, No Aerie, Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@309 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". They found it much as it had always been, only... smaller. It was there that they married, before Gorion's stone memorial within the keep's gardens - a modest ceremony with little pomp or fanfare, attended only by their closest companions.
+
+It was not long until the newlyweds were on the road again, despite Imoen's new appreciation for the magical tomes in the library shelves. Much as she'd privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, desperately in love and far too afraid to lose what they'd fought so hard to nurture. Aware of Imoen's discomfort, <CHARNAME> tried to shield her beloved from <PRO_HISHER> actions as best <PRO_HESHE> could, for <PRO_HISHER> love was just as deep and genuine.
+
+It was an unsustainable situation. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+Even through all their follies, the couple couldn't stay apart for long. like an insidious addiction their love gnawed at their insides, dousing anger to cinders time and again. Over the years Imoen's worldview drifted closer to <CHARNAME>'s, and <CHARNAME>'s closer to hers in turn. Though still some disagreements would devolve into shouting matches, neither one could escape the near preternatural attraction they felt for one another.
+
+And whenever the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that Imoen would stand by <PRO_HISHER> side, as ready as always to fight for whom she held most dear. 
+~
+
+	// Madly in love, Evil Player, Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@310 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". Aerie agreed to tag along, curious about Imoen's childhood home and ever so delighted to no longer be under constant threat. Together they had a tearful reunion with Winthrop and visited Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Despite Imoen's new appreciation for the magical tomes in the library shelves, it was not long until the couple was on the road again. Aerie joined them for a time but quickly broke off to find her own path, deeply concerned of <CHARNAME>'s ambitions. She departed among many tears and quiet warnings, promising to stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever Imoen needed her most; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.
+
+Aerie's warnings were not without foundation. Much as Imoen had privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, desperately in love and far too afraid to lose what they'd fought so hard to nurture. Aware of Imoen's discomfort, <CHARNAME> tried to shield her beloved from <PRO_HISHER> actions as best <PRO_HESHE> could, for <PRO_HISHER> love was just as deep and genuine.
+
+It was an unsustainable situation. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+Even through all their follies, the couple couldn't stay apart for long. like an insidious addiction their love gnawed at their insides, dousing anger to cinders time and again. Over the years Imoen's worldview drifted closer to <CHARNAME>'s, and <CHARNAME>'s closer to hers in turn. Though still some disagreements would devolve into shouting matches, neither one could escape the near preternatural attraction they felt for one another.
+
+And whenever the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that Imoen would stand by <PRO_HISHER> side, as ready as always to fight for whom she held most dear. 
+~
+
+	// Madly in love, Evil Player, Aerie, Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointMad","GLOBAL",1)
+Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@311 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". Aerie agreed to tag along, curious about Imoen's childhood home and ever so delighted to no longer be under constant threat. It was there that Aerie officiated their wedding, before Gorion's stone memorial within the keep's gardens - a modest ceremony with little pomp or fanfare, attended only by their closest companions.
+
+Despite Imoen's new appreciation for the magical tomes in the library shelves, it was not long until the newlyweds were on the road again. Aerie joined them for a time but quickly broke off to find her own path, deeply concerned of <CHARNAME>'s ambitions. She departed among many tears and quiet warnings, promising to stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever Imoen needed her most; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.
+
+Aerie's warnings were not without foundation. Much as Imoen had privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, desperately in love and far too afraid to lose what they'd fought so hard to nurture. Aware of Imoen's discomfort, <CHARNAME> tried to shield her beloved from <PRO_HISHER> actions as best <PRO_HESHE> could, for <PRO_HISHER> love was just as deep and genuine.
+
+It was an unsustainable situation. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+Even through all their follies, the couple couldn't stay apart for long. like an insidious addiction their love gnawed at their insides, dousing anger to cinders time and again. Over the years Imoen's worldview drifted closer to <CHARNAME>'s, and <CHARNAME>'s closer to hers in turn. Though still some disagreements would devolve into shouting matches, neither one could escape the near preternatural attraction they felt for one another.
+
+And whenever the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that Imoen would stand by <PRO_HISHER> side, as ready as always to fight for whom she held most dear. 
+~
+	
+// Regular Romance
+
+	// Regular Romance, Good Player, No Aerie, No Marriage
+	
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@350 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. They had a tearful reunion at Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would take a break and disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms.
+~
+	
+	// Regular Romance, Good Player, No Aerie, Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@351 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. It was there that they married, before Gorion's stone memorial within the keep's gardens - a modest ceremony attended by their closest friends and one or two heroes of legend.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would take a break and disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms.
+~	
+	
+	// Regular Romance, Good Player, Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@352 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. Together they had a tearful reunion with Winthrop and visited Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would take a break and disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms.
+~
+
+	// Regular Romance, Good Player, Aerie, Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+Alignment(Player1,MASK_GOOD)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@353 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. It was before Gorion's Memorial within the keep's gardens that she officiated the couple's wedding - a modest ceremony attended by their closest friends and one or two heroes of legend.
+
+Though Imoen had developed a new appreciation for the magical tomes in the library's shelves, her wanderlust quickly drove the newlyweds to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. It was simple tourism at first, but their power was great, and the evils they encountered many. Not <CHARNAME> nor Imoen could stand idly by when there were wrongs to be righted. Over time their efforts focused on what upset Imoen the most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Their combined abilities would often end fights before they'd even started, and so freedom from stifling oppression followed in the couple's wake.
+
+Their exploits would make them a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won. Once in a while they would take a break and disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land for the better wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces for good to ever walk the realms.
+~
+
+	// Regular Romance, Neutral Player, No Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@354 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. They had a tearful reunion at Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms.
+~
+		
+	// Regular Romance, Neutral Player, No Aerie, Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@355 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and to see Winthrop again. It was there that they married, before Gorion's stone memorial within the keep's gardens - a modest ceremony attended by their closest friends and one or two heroes of legend.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the newlyweds to seek new sights. They traveled far and wide, sometimes in the company of others, frequently by themselves. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms.
+~
+		
+
+	// Regular Romance, Neutral Player, Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@356 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. Together they had a tearful reunion with Winthrop and visited Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms.
+~
+
+	// Regular Romance, Neutral Player, Aerie, Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_GOOD)
+!Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@357 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to make sure it remained intact and "to see ol' Puffguts again". Aerie agreed to tag along, curious about her friends' childhood home and ever so delighted to no longer be under constant threat. It was before Gorion's Memorial within the keep's gardens that she officiated the couple's wedding - a modest ceremony attended by their closest friends and one or two heroes of legend.
+		
+Though she'd developed a new appreciation for the magical tomes in the library's shelves, Imoen's wanderlust quickly drove the couple to seek new sights. Aerie joined them for a time but eventually broke off to find her own path, departing among many tears and promises to always stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever her abilities were most needed; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.  
+
+As for <CHARNAME> and Imoen, they traveled far and wide. Soon what began as simple tourism became proper adventuring, driven by familiar tales of encroaching monsters, fearsome dragons, missing children or haunted groves - with each new quest somehow outdoing the last in both scale and notoriety. Imoen did push now and then to go after what upset her most: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she's credited with blowing up the rehabilitated Spellhold and dismantling the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen. The increasingly famous couple made for a high-profile target, but no threat was too large to overcome for a pair that had fought demigods and won.
+
+Once in a while they would disappear altogether, retreating to private sanctums or exotic locations where hardly anyone knew their names. Arguments and disagreements between them were not unheard of, but they were sure to never last long. A lifetime of dealing with each other meant a learned ability to smooth the rough edges.
+
+Together Imoen and <CHARNAME> became living legends in Faerun and beyond. Their names were enshrined in both official records and popular lore, their influence having shaped the land wherever they went. After their eventual passing in retirement, history would remember them as one of the most prominent forces to ever walk the realms.
+~
+
+	// Regular Romance, Evil Player, No Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@358 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". They found it much as it had always been, only... smaller. Despite Imoen's new appreciation for the magical tomes in the library shelves, it was not long until the couple was on the road again.
+
+Much as Imoen had privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, far too afraid to lose what they'd fought so hard to nurture.
+
+It was not to last. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+The couple drifted further apart, driven down different paths by their divergent characters. As she aged Imoen found her drive in going after tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps she did it to make up for her part in <CHARNAME>'s rise to power. Perhaps it was simply a bid to eliminate <CHARNAME>'s competition.
+
+And yet, for all their follies, sooner or later they would always find one another again. Their trysts would be brief, fiery, passionate, sometimes even wordless. Should they stay together for longer, they were sure to part after a shouting match, then spend years in opposite sides of whatever conflict was brewing around <CHARNAME>... only to fall back into the same pattern, all over again.
+
+Years later, when the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that Imoen stood beside them. By all accounts their assault should have been victorious, yet somehow at the final battle <CHARNAME> and <PRO_HISHER> cohorts managed to vanquish them all. In the aftermath, Imoen's body was the only one to never be recovered, and she was never again seen in Abeir-Toril.
+~
+
+	// Regular Romance, Evil Player, No Aerie, Marriage
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@359 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". They found it much as it had always been, only... smaller. It was there that they married, before Gorion's stone memorial within the keep's gardens - a modest ceremony with little pomp or fanfare, attended only by their closest companions.
+
+It was not long until the newlyweds were on the road again, despite Imoen's new appreciation for the magical tomes in the library shelves. Much as she'd privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, far too afraid to lose what they'd fought so hard to nurture.
+
+It was not to last. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+The couple drifted further apart, driven down different paths by their divergent characters. As she aged Imoen found her drive in going after tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps she did it to make up for her part in <CHARNAME>'s rise to power. Perhaps it was simply a bid to eliminate <CHARNAME>'s competition.
+
+And yet, for all their follies, sooner or later they would always find one another again. Their trysts would be brief, fiery, passionate, sometimes even wordless. Should they stay together for longer, they were sure to part after a shouting match, then spend years in opposite sides of whatever conflict was brewing around <CHARNAME>... only to fall back into the same pattern, all over again.
+
+Years later, when the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that <CHARNAME>'s estranged wife stood beside them. By all accounts their assault should have been victorious, yet somehow at the final battle <CHARNAME> and <PRO_HISHER> cohorts managed to vanquish them all. In the aftermath, Imoen's body was the only one to never be recovered, and she was never again seen in Abeir-Toril.
+~
+
+
+	// Regular Romance, Evil Player, Aerie, No Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+!Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@360 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". Aerie agreed to tag along, curious about Imoen's childhood home and ever so delighted to no longer be under constant threat. Together they had a tearful reunion with Winthrop and visited Gorion's memorial, an understated stone pillar erected within the keep's gardens.
+
+Despite Imoen's new appreciation for the magical tomes in the library shelves, it was not long until the couple was on the road again. Aerie joined them for a time but quickly broke off to find her own path, deeply concerned of <CHARNAME>'s ambitions. She departed among many tears and quiet warnings, promising to stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever Imoen needed her most; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.
+
+Aerie's warnings were not without foundation. Much as Imoen had privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, far too afraid to lose what they'd fought so hard to nurture.
+
+It was not to last. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+The couple drifted further apart, driven down different paths by their divergent characters. As she aged Imoen found her drive in going after tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps she did it to make up for her part in <CHARNAME>'s rise to power. Perhaps it was simply a bid to eliminate <CHARNAME>'s competition.
+
+And yet, for all their follies, sooner or later they would always find one another again. Their trysts would be brief, fiery, passionate, sometimes even wordless. Should they stay together for longer, they were sure to part after a shouting match, then spend years in opposite sides of whatever conflict was brewing around <CHARNAME>... only to fall back into the same pattern, all over again.
+
+Years later, when the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that Imoen stood beside them. By all accounts their assault should have been victorious, yet somehow at the final battle <CHARNAME> and <PRO_HISHER> cohorts managed to vanquish them all. In the aftermath, Imoen's body was the only one to never be recovered, and she was never again seen in Abeir-Toril.
+~
+
+	// Regular Romance, Evil Player, Aerie, Marriage
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpJointStandard","GLOBAL",1)
+!Alignment(Player1,MASK_EVIL)
+Global("IRTWantsMarriage","GLOBAL",1)
+*/
+@361 =	
+~With the Bhaalspawn Saga at their backs, Imoen and <CHARNAME> were at last able to roam where they pleased. At Imoen's behest they returned to Candlekeep for a time, both to put her worries for the keep at ease and "to see ol' Puffguts again". Aerie agreed to tag along, curious about Imoen's childhood home and ever so delighted to no longer be under constant threat. It was there that Aerie officiated their wedding, before Gorion's stone memorial within the keep's gardens - a modest ceremony with little pomp or fanfare, attended only by their closest companions.
+
+Despite Imoen's new appreciation for the magical tomes in the library shelves, it was not long until the newlyweds was on the road again. Aerie joined them for a time but quickly broke off to find her own path, deeply concerned of <CHARNAME>'s ambitions. She departed among many tears and quiet warnings, promising to stay in touch - a promise she always endeavored to keep. Over the years she developed a knack for showing up whenever Imoen needed her most; when asked about her uncanny timing, the elf would simply smile and credit Baervan's quirky sense of humor.
+
+Aerie's warnings were not without foundation. Much as Imoen had privately feared, <CHARNAME>'s evil nature did not change after their divine essence was forfeit. <PRO_HISHER> power was as great as <PRO_HISHER> ambition, and neither would be held back by morals or scruples. For a time Imoen turned a blind eye to increasingly ruthless deeds, far too afraid to lose what they'd fought so hard to nurture.
+
+It was not to last. Imoen's objections had been mild and understated in the past, but things had changed. Now traveling as equals without a looming threat in the horizon, she ultimately found herself unable to take refuge in the role of an underling. Torn between her love and her conscience, Imoen's desire was not to stifle <CHARNAME>'s ambition, but simply not to be a part of any suffering <PRO_HESHE> caused. 
+
+As <CHARNAME>'s influence grew, arguments became frequent and anger a common occurrence. Imoen would leave to pursue her own goals from time to time, be it out of sincere concern, a need to balance <CHARNAME>'s actions or purely out of spite. Her outlook on the world did not remain unscathed, and perhaps it was during one of these spats that Imoen single-handedly blew up the rehabilitated Spellhold and erased the Cowled Wizards of Amn from existence, giving each member in turn a generous choice: give up their robes, or suffer her personally developed Polymorph Other spell. A small cattle ranch thrives in the outskirts of Athkatla because of this, with several ex-wizards learning each day what it's like to be magically imprisoned and bound inside a pen.
+
+The couple drifted further apart, driven down different paths by their divergent characters. As she aged Imoen found her drive in going after tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps she did it to make up for her part in <CHARNAME>'s rise to power. Perhaps it was simply a bid to eliminate <CHARNAME>'s competition.
+
+And yet, for all their follies, sooner or later they would always find one another again. Their trysts would be brief, fiery, passionate, sometimes even wordless. Should they stay together for longer, they were sure to part after a shouting match, then spend years in opposite sides of whatever conflict was brewing around <CHARNAME>... only to fall back into the same pattern, all over again.
+
+Years later, when the great heroes of the Realms banded together to stop <CHARNAME>'s relentless choke-hold on Faerun, it was with a heavy heart that <CHARNAME>'s estranged wife stood beside them. By all accounts their assault should have been victorious, yet somehow at the final battle <CHARNAME> and <PRO_HISHER> cohorts managed to vanquish them all. In the aftermath, Imoen's body was the only one to never be recovered, and she was never again seen in Abeir-Toril.
+~
+	
+// Not romanced, Aerie love, mortal player
+
+/*
+!Dead("Aerie")
+InParty("Imoen2")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTImAerWishYes","GLOBAL",1)
+!Global("ImoenRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+!Global("ImoenRomanceActive","GLOBAL",3)
+!Global("IRTEpBreakup","GLOBAL",1)
+*/
+
+@400 =
+~Though they traveled with <CHARNAME> for a time, Imoen and Aerie soon sought their own path, eager to forge a life together. They roamed the Realms far and wide for the rest of their lives, never settling down in any one place for too long. Outspoken and unapologetic about their love for one another, they would often challenge anyone that openly disapproved of their relationship. With their mounting reputation the problem resolved itself, as word spread of hecklers being made to levitate in the town square or village green, upside down and stark naked.
+
+Far too many to recount, their adventures slowly drifted toward a cause both women were passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt".
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed beloved - a woman exceptional enough, Aerie would say, to make your innermost wishes come true with naught but a magical word.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+
+// Imoen was kicked out and friended Aerie is still in party
+// TODO: THIS EPILOGUE REPLACES AERIE'S, AND ONLY HAPPENS IF AERIE IS STILL IN PARTY BY GAME'S END
+/* Conditions:
+   Global("IRTAerieImoenLeft","GLOBAL",1)
+   InParty("Aerie")
+	!Dead("Aerie")
+*/
+
+@401 =
+~Distraught by her friend's departure, Aerie wasted no time in finding Imoen. Once happily reunited, Imoen and Aerie traveled the Realms together for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women were passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt".
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+
+
+// Not romanced, Aerie Friendship, mortal player
+
+/*
+!Dead("Aerie")
+InParty("Imoen2")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+!Global("IRTImAerWishYes","GLOBAL",1)
+!Global("ImoenRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+!Global("ImoenRomanceActive","GLOBAL",3)
+!Global("IRTEpBreakup","GLOBAL",1)
+*/
+
+@402 =
+~Though they traveled with <CHARNAME> for a time, Imoen and Aerie soon sought their own path. They roamed the Realms far and wide for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women were passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt".
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+
+// Broke up at Throne of Blood, Aerie
+
+/*
+InParty("Imoen2")
+!Dead("Aerie")
+GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpBreakup","GLOBAL",1)
+*/
+@500 =
+
+~Despite her decisive split at the Throne of Blood, Imoen was an emotional wreck after parting ways with <CHARNAME>. She returned with Aerie to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. With time and Aerie's careful counsel, Imoen eventually healed her heartbreak and reclaimed her former dreams of seeing everything the world had to offer.
+
+Imoen and Aerie took to the road and traveled the Realms together for the rest of their lives, never settling down in any one place for too long. Far too many to recount, their adventures slowly drifted toward a cause both women grew passionate about: uprooting slavery and oppression wherever they found it. Through their increasingly notorious exploits the pair became known as the Shroud Witches, Slavers' Bane. A following gradually gathered in their wake, and Imoen swiftly seized the opportunity to have a cadre of trained underlings at her command. The group would eventually become a sprawling organization run much like a Thieves' Guild, yet with an entirely different purpose. It was aptly named "The Tyrant's Haunt."
+
+With Imoen's cunning and Aerie's conviction, the Haunt spread its influence swiftly through Faerun. Countless slaver rings were dismantled by their actions - sometimes subtle, often forceful; feudal lords were unceremoniously unseated, would-be smalltime despots were efficiently raided and dispatched. Its vast eyes-and-ears network would pin-point wrongfully convicted prisoners, enabling their eventual freedom, through legal means or otherwise. Perhaps most notably in its early years, the Haunt would infiltrate the Cowled Wizards of Amn, topple them from within and instate a new order much more in line with Imoen's designs.
+
+Though her magic would increase her lifespan significantly, Imoen eventually succumbed to the ailments of old age. She quietly passed in the Baldur's Gate Chapter of the Haunt, Aerie by her side and surrounded by the many loyal friends made over the decades. In an inner courtyard of the Chapter, a life-sized statue of her likeness commemorates her departure. An obsidian plaque is affixed to the pedestal beneath her brass feet, clearly etched with her famous last words: "Yer gonna be screwed without me."
+
+After Imoen's passing, Aerie redoubled her efforts to travel Faerun and beyond, working to fulfil her promise to spread the Haunt's influence to every corner of the known world. In her travels she would regale anyone that would listen with tales of her departed friend - a woman exceptional enough, Aerie would say, to always place friendship before her innermost wishes.
+
+The lore of the modern Haunt is pervaded with over a thousand stories of Imoen's life and deeds, many heroic, most of them an indulgence of her rebellious streak. Many of these stories would seep into the folklore, become epic tales, become legend.
+
+All of them entirely factual and not embellished in the slightest.
+~
+
+// Broke up at Throne of Blood, No Aerie
+
+/*
+InParty("Imoen2")
+OR(2)
+	Dead("Aerie")
+	!GlobalGT("IRTAerImFriend","GLOBAL",0)
+Global("IRTEpBreakup","GLOBAL",1)
+*/
+
+@501 =
+~Despite her decisive split at the Throne of Blood, Imoen was an emotional wreck after parting ways with <CHARNAME>. She returned to Candlekeep for a time, staying in her old room beneath Winthrop's tavern after a reunion full of bittersweet tears. She gave herself to the study of the magic tomes in the library's shelves, if only to distract herself from the bitter ache in her chest.
+
+Eventually Imoen felt once more ready to take to the road. She traveled far and wide, reclaiming her dreams of seeing everything the world had to offer. Her former sense of wonder was a hard thing to recover, however, tarnished as it had been by her experiences during the Bhaalspawn saga. Her intentions of simple tourism drifted toward adventure, and adventure morphed into fixing the things that made her mad: tyrants, warlords, slavers and other unpleasant individuals that had no business telling anybody what to do. Perhaps most notably, she single-handedly blew up the rehabilitated Spellhold and dismantled the Cowled Wizards of Amn, using a personally developed Polymorph Other spell to teach every one of their members what it's like to be rounded up like cattle into a magical pen.
+
+Though later she was seen in such vaunted company as Khelben "Blackstaff" and Elminster, Imoen shied away from outright heroism. To the last of her days her life remained as her relationship with <CHARNAME> had been: unpredictable and complicated, but undeniably fun.
+~

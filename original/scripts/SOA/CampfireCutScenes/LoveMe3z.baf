@@ -1,0 +1,22 @@
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Imoen2")
+     Explore()
+	  JumpToPoint([1713.715])
+	  MoveToPointNoInterrupt([1714.715])
+	  MoveViewPoint([2115.545],0)
+	  FadeFromColor([30.0],0)
+	  Wait(2)  
+	  MoveToPointNoInterrupt([2115.545])
+	  Wait(1)
+	  DisplayStringHead(Myself,@0)
+	  Wait(1)
+	  MoveToPointNoInterrupt([2330.642])
+	  Wait(1)
+	  FaceObject(Player1)
+	  StartDialogueNoSet(Player1)
+	  EndCutSceneMode()
+END

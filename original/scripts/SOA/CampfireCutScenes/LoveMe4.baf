@@ -1,0 +1,41 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	Wait(1)
+	FaceObject("Imoen2")
+	Wait(1)
+	DisplayStringHead(Myself,@0)
+	MoveToPointNoInterrupt([2632.940])
+	DisplayStringHead(Myself,@1)
+	MoveToPointNoInterrupt([2587.1225])
+	DisplayStringHead(Myself,@2)
+	MoveToPointNoInterrupt([2587.1406])
+	DisplayStringHead(Myself,@3)
+	MoveToPointNoInterrupt([2507.1758])
+	DisplayStringHead(Myself,@4)
+	MoveToPointNoInterrupt([2421.1928])
+	FaceObject("Imoen2")
+	StartDialog("Player1",Player1)
+	EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId("Imoen2")
+	MoveViewPoint([2179.1616],VERY_FAST)
+	DisplayStringHead(Myself,@5)
+	MoveToPointNoInterrupt([2632.940])
+	DisplayStringHead(Myself,@6)
+	MoveToPointNoInterrupt([2587.1225])
+	DisplayStringHead(Myself,@7)
+	MoveToPointNoInterrupt([2587.1406])
+	DisplayStringHead(Myself,@8)
+	MoveToPointNoInterrupt([2507.1758])
+	Wait(2)
+	DisplayStringHead(Myself,@9)
+	MoveToPointNoInterrupt([2421.1958])
+END

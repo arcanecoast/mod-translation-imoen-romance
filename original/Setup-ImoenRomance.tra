@@ -1,0 +1,104 @@
+@0    = ~3.9~
+@1    = ~Imoen NPC Romance Mod for BG2:SoA TOB (3.9 Version!)~
+@2    = ~Fix Imoen213 script for vanilla bg2...~
+@3    = ~Bob~
+@4    = ~A bracelet is a loop of material, such as a strap or chain, that is intended to be worn around the wrist or forearm, without being attached to clothing.~
+@5    = ~This fine bracelet is made of some strange material the color of bronze. It is almost weightless, and displays intricate carvings and symbols on its surface. They don't belong to any language you understand.
+
+	It was acquired by Imoen from a traveling merchant at Waukeen's Promenade. "Acquired" is to be read as "stolen". Its origin is unknown - perhaps a family heirloom, or an ancient artifact long lost and recently recovered. It certainly does not look of recent make.
+
+	It is clear that "Bob", as Imoen has dubbed it ("They all have these grand silly names. Bob suits him just fine.") harbors considerable power within.
+	
+	Though intriguing, this property doesn't seem to be nefarious. The artifact itself emanates a strong positive energy, as if it's somehow willing to be of assistance. This, combined with its fine craftmanship, seems to confer its wearer a kind of supernatural grace and elegance. Additionally, Imoen claims to be able to "think better", whatever that might mean.
+
+	Needless to say, Imoen is extremely protective of Bob and will in all likelihood chew off your head rather than let you use it, sell it, or do anything untoward with it.
+
+STATISTICS:
+
+Equipped abilities:
+- Increase Dexterity by 1
+- Regenerate 1 HP every 3 seconds
+- Improves casting speed by 2
+
+Item Type: Bracelet
+Weight: 0~
+@6    = ~Calcen~
+@7    = ~Calcen
+
+        This bracelet is made of some strange material the color of bronze, with intricate obsidian carvings all around its surface. You have learned the symbols belong to one of the many Tanar'ri dialects spoken throughout the Abyss. They were engraved by the demon Xaglaroth in order to magically imprison his nemesis within the bracelet, the Deva Sorenthis.
+
+        Upon striking a deal with the demon, Calcen has become a dark conduit to drain Sorenthis of his angelic energy, transferring many of its benefits to the wearer. Both spellcasting and physical prowess are significantly improved. The bracelet also became inexplicably heavy.
+
+        Imoen continues to be horrified with the item and disgusted by your actions, and she refuses to have anything to do with it anymore.
+
+STATISTICS:
+
+Equipped abilities:
+– Increase Dexterity by 1
+– Regenerate 1 HP every 3 seconds
+– Improves casting speed by 2
+- Memorize an extra 7th,8th and 9th-level spell
+- Cast Greater Whirlwind once per day
+- Cast Improved Alacrity once per day
+
+Item Type: Bracelet (Bracers)
+Weight: 3 lbs.~
+@8    = ~Greater Whirlwind~
+@9    = ~Improved Alacrity~
+@10   = ~A note from Imoen~
+@11   = ~
+
+I can't be with you anymore.
+
+
+I'm sorry for breaking my promises.~
+@12   = ~Mara the Merchant~
+@13   = ~Talker~
+@14   = ~Young Boy~
+@15   = ~Young Girl~
+@16   = ~Very young Imoen~
+@17   = ~Imoen~
+@18   = ~Nasty Goblin~
+@19   = ~Teen guy~
+@20   = ~Teen girl~
+@21   = ~Teen Imoen~
+@22   = ~Young Man~
+@23   = ~Young Woman~
+@24   = ~Younger Imoen~
+@25   = ~Phlydia~
+@26   = ~Dreppin~
+@27   = ~Reevor~
+@28   = ~Jondalar~
+@29   = ~Obe~
+@30   = ~Hull~
+@31   = ~Fuller~
+@32   = ~Khalid~
+@33   = ~Winthrop~
+@34   = ~Tarren~
+@35   = ~Nevea~
+@36   = ~Jaenya~
+@37   = ~Young Imoen~
+@38   = ~Deathstalker~
+@39   = ~Sorenthis~
+@40   = ~Xaglaroth~
+@41   = ~Ravager Change~
+@42   = ~imrav~
+@43   = ~giverav~
+@44   = ~End Ravager~
+@45   = ~Slayer Change~
+@46   = ~Summon Sorenthis~
+@47   = ~Summon Sorenthis
+(Any School)
+
+Range: 120 ft.
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens a celestial gate and calls forth the Deva Sorenthis, to fight at the caster's side until the spell expires or the Deva's avatar is slain.~
+@48   = ~Area unpack ar25mr vanilla~
+@49   = ~Allow Multiple Romance's~
+@50   = ~Romance Option~
+@51   = ~Uninstalling~
+@52   = ~Don't Allow multiple Romance (Only valid for Vanilla romances)~
