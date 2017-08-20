@@ -4,7 +4,7 @@
 
 Описание мода: https://arcanecoast.ru/mod/imoen-romance-soa
 
-Рабочая ветка перевода: https://arcanecoast.ru/forum/viewtopic.php?f=6&p=2173228
+Рабочая ветка перевода: https://arcanecoast.ru/forum/viewtopic.php?f=6&t=875
 
 #### План перевода
 
